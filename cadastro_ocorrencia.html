@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Ocorrência - Alô Infra</title>
+  <link rel="stylesheet" href="css/cadastro_ocorrencia.css">
+  <link rel="icon" href="image/phone.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <header class="main-header">
+    <h1>Nova Ocorrência</h1>
+    <p>Preencha as informações abaixo para relatar um problema.</p>
+    <div class="set-back">
+      <a href="index.html" class="back">🏠 Voltar</a>
+    </div>
+  </header>
+
+  <main class="home-content">
+    <form id="form-ocorrencia">
+      <label for="descricao">Descrição do problema:</label>
+      <textarea id="descricao" name="descricao" rows="4" required placeholder="Ex: Buraco na rua, poste sem luz..."></textarea>
+
+      <label for="foto">Foto (opcional):</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
+
+      <label for="tipo">Tipo de problema:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecione...</option>
+        <option value="buraco">Buraco na rua</option>
+        <option value="iluminacao">Iluminação pública</option>
+        <option value="esgoto">Vazamento de esgoto</option>
+        <option value="lixo">Lixo acumulado</option>
+        <option value="calçada">Calçada danificada</option>
+        <option value="pintura">Pintura de sinalização</option>
+        <option value="vegetacao">Vegetação alta</option>
+        <option value="transito">Problema de trânsito</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="localizacao">Localização no mapa:</label>
+      <div id="map"></div>
+
+      <button type="submit" class="btn btn-primary">📤 Enviar Ocorrência</button>
+    </form>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 Alô Infra - Projeto Acadêmico UECE</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/location_map.js"></script>
+</body>
+</html>

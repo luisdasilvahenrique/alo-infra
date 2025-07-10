@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f2f5, #e6eef2);
+}
+
+:root {
+  --azul-principal: #0A6EBD;
+  --amarelo: #F2C94C;
+  --vermelho: #E63946;
+  --cinza-claro: #e9ecef;
+  --cinza-medio: #adb5bd;
+}
+
+.main-header {
+  background-color: var(--azul-principal);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#set-back {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.back {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+
+  color: var(--cinza-claro);
+}
+
+.home-content {
+  margin-top: 1.5rem;
+  padding: 2rem;
+}
+
+.lista-ocorrencias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 100%;
+}
+
+.ocorrencia {
+  flex: 1 1 400px;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ocorrencia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--azul-principal);
+  border-radius: 8px;
+}
+
+.ocorrencia-conteudo {
+  padding: 1rem;
+}
+
+.ocorrencia h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #0A6EBD;
+}
+
+.ocorrencia p {
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+  color: #333;
+}
+
+.ocorrencia-actions {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-update {
+  background-color: var(--amarelo);
+  color: #333;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: var(--vermelho);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-view {
+  background-color: var(--azul-principal);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.main-footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--cinza-medio);
+  font-size: 0.9rem;
+}
